@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
-import { FaExternalLinkAlt } from "react-icons/fa";
+import LinkButton from "./LinkButton";
 
 type Props = {
   params: {
@@ -117,26 +117,12 @@ export default async function UserPage({ params }: Props) {
         {/* Links Section */}
         <div className="space-y-4 mb-12">
           {page.links.map((link) => (
-            <a
+            <LinkButton
               key={link.id}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
+              link={link}
+              pageId={page.id}
               className={`block ${linkClass} rounded-xl p-5 text-center font-semibold text-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-1`}
-              onClick={async () => {
-                // Track click
-                await fetch("/api/analytics/click", {
-                  method: "POST",
-                  headers: { "Content-Type": "application/json" },
-                  body: JSON.stringify({ linkId: link.id, pageId: page.id }),
-                });
-              }}
-            >
-              <div className="flex items-center justify-center">
-                <span>{link.title}</span>
-                <FaExternalLinkAlt className="ml-2 text-sm opacity-50" />
-              </div>
-            </a>
+            />
           ))}
 
           {page.links.length === 0 && (
