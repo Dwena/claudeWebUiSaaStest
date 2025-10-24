@@ -63,12 +63,12 @@ export default function RegisterPage() {
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center justify-center">
             <FaLink className="text-primary-600 text-3xl mr-2" />
-            <span className="text-3xl font-bold text-gray-900">LinkPro</span>
+            <span className="text-3xl font-bold text-black">LinkPro</span>
           </Link>
-          <h2 className="mt-6 text-3xl font-bold text-gray-900">
+          <h2 className="mt-6 text-3xl font-bold text-black">
             Create your account
           </h2>
-          <p className="mt-2 text-gray-600">
+          <p className="mt-2 text-black">
             Start sharing your links today
           </p>
         </div>
@@ -76,7 +76,7 @@ export default function RegisterPage() {
         <div className="bg-white rounded-xl shadow-lg p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             {error && (
-              <div className="bg-red-50 text-red-600 p-3 rounded-lg text-sm">
+              <div className="bg-red-50 text-black p-3 rounded-lg text-sm">
                 {error}
               </div>
             )}
@@ -84,7 +84,7 @@ export default function RegisterPage() {
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="block text-sm font-medium text-black mb-2"
               >
                 Name
               </label>
@@ -102,7 +102,7 @@ export default function RegisterPage() {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="block text-sm font-medium text-black mb-2"
               >
                 Email
               </label>
@@ -120,7 +120,7 @@ export default function RegisterPage() {
             <div>
               <label
                 htmlFor="password"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="block text-sm font-medium text-black mb-2"
               >
                 Password
               </label>
@@ -134,7 +134,7 @@ export default function RegisterPage() {
                 placeholder="••••••••"
                 minLength={6}
               />
-              <p className="mt-1 text-sm text-gray-500">
+              <p className="mt-1 text-sm text-black">
                 At least 6 characters
               </p>
             </div>
@@ -149,7 +149,7 @@ export default function RegisterPage() {
           </form>
 
           <div className="mt-6 text-center">
-            <p className="text-gray-600">
+            <p className="text-black">
               Already have an account?{" "}
               <Link
                 href="/login"

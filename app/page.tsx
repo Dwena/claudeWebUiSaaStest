@@ -10,12 +10,12 @@ export default function Home() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <FaLink className="text-primary-600 text-2xl mr-2" />
-              <span className="text-2xl font-bold text-gray-900">LinkPro</span>
+              <span className="text-2xl font-bold text-black">LinkPro</span>
             </div>
             <div className="flex items-center space-x-4">
               <Link
                 href="/login"
-                className="text-gray-700 hover:text-gray-900 font-medium"
+                className="text-black hover:text-black font-medium"
               >
                 Login
               </Link>
@@ -33,10 +33,10 @@ export default function Home() {
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold text-black mb-6">
             One Link for Everything
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-black mb-8 max-w-3xl mx-auto">
             Share your content, social profiles, and contact info with a single link.
             Perfect for Instagram, TikTok, Twitter, and more.
           </p>
@@ -54,7 +54,7 @@ export default function Home() {
               View Pricing
             </Link>
           </div>
-          <p className="mt-4 text-gray-500">
+          <p className="mt-4 text-black">
             No credit card required • Free forever plan available
           </p>
         </div>
@@ -66,7 +66,7 @@ export default function Home() {
               <FaLink />
             </div>
             <h3 className="text-xl font-semibold mb-2">Unlimited Links</h3>
-            <p className="text-gray-600">
+            <p className="text-black">
               Add all your important links in one place. Social media, websites, stores, and more.
             </p>
           </div>
@@ -76,7 +76,7 @@ export default function Home() {
               <FaPalette />
             </div>
             <h3 className="text-xl font-semibold mb-2">Custom Themes</h3>
-            <p className="text-gray-600">
+            <p className="text-black">
               Choose from beautiful themes or create your own with custom colors and styles.
             </p>
           </div>
@@ -86,7 +86,7 @@ export default function Home() {
               <FaChartLine />
             </div>
             <h3 className="text-xl font-semibold mb-2">Analytics</h3>
-            <p className="text-gray-600">
+            <p className="text-black">
               Track clicks, views, and engagement to understand your audience better.
             </p>
           </div>
@@ -96,7 +96,7 @@ export default function Home() {
               <FaRocket />
             </div>
             <h3 className="text-xl font-semibold mb-2">Fast & Reliable</h3>
-            <p className="text-gray-600">
+            <p className="text-black">
               Lightning-fast page loads and 99.9% uptime ensure your links are always accessible.
             </p>
           </div>
@@ -125,9 +125,9 @@ export default function Home() {
           <div className="flex justify-between items-center">
             <div className="flex items-center">
               <FaLink className="text-primary-600 text-xl mr-2" />
-              <span className="text-xl font-bold text-gray-900">LinkPro</span>
+              <span className="text-xl font-bold text-black">LinkPro</span>
             </div>
-            <p className="text-gray-600">
+            <p className="text-black">
               &copy; 2024 LinkPro. All rights reserved.
             </p>
           </div>

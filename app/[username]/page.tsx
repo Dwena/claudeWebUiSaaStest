@@ -56,27 +56,27 @@ export default async function UserPage({ params }: Props) {
   };
 
   const linkStyles: Record<string, string> = {
-    default: "bg-white text-gray-900 hover:bg-gray-50",
-    dark: "bg-gray-800 text-white hover:bg-gray-700",
-    sunset: "bg-white text-gray-900 hover:bg-orange-50",
-    forest: "bg-white text-gray-900 hover:bg-green-50",
-    ocean: "bg-white text-gray-900 hover:bg-blue-50",
+    default: "bg-white text-black hover:bg-gray-50",
+    dark: "bg-gray-200 text-black hover:bg-gray-300",
+    sunset: "bg-white text-black hover:bg-orange-50",
+    forest: "bg-white text-black hover:bg-green-50",
+    ocean: "bg-white text-black hover:bg-blue-50",
   };
 
   const textStyles: Record<string, string> = {
-    default: "text-gray-900",
-    dark: "text-white",
-    sunset: "text-gray-900",
-    forest: "text-gray-900",
-    ocean: "text-gray-900",
+    default: "text-black",
+    dark: "text-black",
+    sunset: "text-black",
+    forest: "text-black",
+    ocean: "text-black",
   };
 
   const bioStyles: Record<string, string> = {
-    default: "text-gray-600",
-    dark: "text-gray-300",
-    sunset: "text-gray-700",
-    forest: "text-gray-700",
-    ocean: "text-gray-700",
+    default: "text-black",
+    dark: "text-black",
+    sunset: "text-black",
+    forest: "text-black",
+    ocean: "text-black",
   };
 
   const theme = page.theme || "default";

@@ -180,7 +180,7 @@ export default function DashboardPage() {
   if (loading || status === "loading") {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-gray-600">Loading...</div>
+        <div className="text-black">Loading...</div>
       </div>
     );
   }
@@ -192,18 +192,18 @@ export default function DashboardPage() {
           <h2 className="text-2xl font-bold mb-6">Create Your Page</h2>
 
           {error && (
-            <div className="bg-red-50 text-red-600 p-3 rounded-lg text-sm mb-4">
+            <div className="bg-red-50 text-black p-3 rounded-lg text-sm mb-4">
               {error}
             </div>
           )}
 
           <form onSubmit={handleCreatePage} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-black mb-2">
                 Username
               </label>
               <div className="flex items-center">
-                <span className="text-gray-500 mr-2">linkpro.com/</span>
+                <span className="text-black mr-2">linkpro.com/</span>
                 <input
                   type="text"
                   required
@@ -219,7 +219,7 @@ export default function DashboardPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-black mb-2">
                 Title
               </label>
               <input
@@ -233,7 +233,7 @@ export default function DashboardPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-black mb-2">
                 Bio (optional)
               </label>
               <textarea
@@ -265,22 +265,22 @@ export default function DashboardPage() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <FaLink className="text-primary-600 text-2xl mr-2" />
-              <span className="text-2xl font-bold text-gray-900">LinkPro</span>
+              <span className="text-2xl font-bold text-black">LinkPro</span>
             </div>
             <div className="flex items-center space-x-4">
               {!session?.user?.isPro && (
                 <Link
                   href="/pricing"
-                  className="flex items-center text-yellow-600 hover:text-yellow-700 font-medium"
+                  className="flex items-center text-black hover:text-black font-medium"
                 >
                   <FaCrown className="mr-2" />
                   Upgrade to Pro
                 </Link>
               )}
-              <span className="text-gray-700">{session?.user?.email}</span>
+              <span className="text-black">{session?.user?.email}</span>
               <button
                 onClick={() => signOut()}
-                className="text-gray-700 hover:text-gray-900"
+                className="text-black hover:text-black"
               >
                 Sign out
               </button>
@@ -298,7 +298,7 @@ export default function DashboardPage() {
 
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-black mb-2">
                     Your Link
                   </label>
                   <div className="flex items-center space-x-2">
@@ -320,7 +320,7 @@ export default function DashboardPage() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-black mb-2">
                     Title
                   </label>
                   <input
@@ -333,7 +333,7 @@ export default function DashboardPage() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-black mb-2">
                     Bio
                   </label>
                   <textarea
@@ -360,7 +360,7 @@ export default function DashboardPage() {
               </div>
 
               {error && (
-                <div className="bg-red-50 text-red-600 p-3 rounded-lg text-sm mb-4">
+                <div className="bg-red-50 text-black p-3 rounded-lg text-sm mb-4">
                   {error}
                 </div>
               )}
@@ -398,7 +398,7 @@ export default function DashboardPage() {
                           setLinkTitle("");
                           setLinkUrl("");
                         }}
-                        className="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300"
+                        className="bg-gray-200 text-black px-4 py-2 rounded-lg hover:bg-gray-300"
                       >
                         Cancel
                       </button>
@@ -409,7 +409,7 @@ export default function DashboardPage() {
 
               <div className="space-y-3">
                 {!page?.links || page.links.length === 0 ? (
-                  <p className="text-gray-500 text-center py-8">
+                  <p className="text-black text-center py-8">
                     No links yet. Add your first link to get started!
                   </p>
                 ) : (
@@ -420,12 +420,12 @@ export default function DashboardPage() {
                     >
                       <div className="flex-1">
                         <h3 className="font-semibold">{link.title}</h3>
-                        <p className="text-sm text-gray-500 truncate">{link.url}</p>
+                        <p className="text-sm text-black truncate">{link.url}</p>
                       </div>
                       <div className="flex items-center space-x-2">
                         <button
                           onClick={() => handleDeleteLink(link.id)}
-                          className="text-red-600 hover:text-red-700 p-2"
+                          className="text-black hover:text-black p-2"
                         >
                           <FaTrash />
                         </button>
@@ -437,7 +437,7 @@ export default function DashboardPage() {
 
               {!session?.user?.isPro && page?.links && page.links.length >= 5 && (
                 <div className="mt-4 bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                  <p className="text-yellow-800 text-sm">
+                  <p className="text-black text-sm">
                     You've reached the free plan limit of 5 links.{" "}
                     <Link href="/pricing" className="font-semibold underline">
                       Upgrade to Pro
@@ -458,7 +458,7 @@ export default function DashboardPage() {
                 <div className="text-center mb-8">
                   <div className="w-24 h-24 rounded-full bg-gray-300 mx-auto mb-4" />
                   <h1 className="text-2xl font-bold mb-2">{title || "Your Name"}</h1>
-                  <p className="text-gray-600">{bio || "Your bio goes here"}</p>
+                  <p className="text-black">{bio || "Your bio goes here"}</p>
                 </div>
 
                 <div className="space-y-3">
@@ -472,7 +472,7 @@ export default function DashboardPage() {
                       </div>
                     ))
                   ) : (
-                    <div className="text-center text-gray-500 py-8">
+                    <div className="text-center text-black py-8">
                       Your links will appear here
                     </div>
                   )}

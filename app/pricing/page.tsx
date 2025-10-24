@@ -10,12 +10,12 @@ export default function PricingPage() {
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center">
               <FaLink className="text-primary-600 text-2xl mr-2" />
-              <span className="text-2xl font-bold text-gray-900">LinkPro</span>
+              <span className="text-2xl font-bold text-black">LinkPro</span>
             </Link>
             <div className="flex items-center space-x-4">
               <Link
                 href="/login"
-                className="text-gray-700 hover:text-gray-900 font-medium"
+                className="text-black hover:text-black font-medium"
               >
                 Login
               </Link>
@@ -32,10 +32,10 @@ export default function PricingPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-5xl font-bold text-black mb-4">
             Simple, Transparent Pricing
           </h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-black">
             Choose the plan that works best for you
           </p>
         </div>
@@ -46,7 +46,7 @@ export default function PricingPage() {
             <h2 className="text-2xl font-bold mb-2">Free</h2>
             <div className="mb-6">
               <span className="text-5xl font-bold">$0</span>
-              <span className="text-gray-600">/month</span>
+              <span className="text-black">/month</span>
             </div>
 
             <ul className="space-y-4 mb-8">
@@ -70,7 +70,7 @@ export default function PricingPage() {
 
             <Link
               href="/register"
-              className="block w-full text-center bg-gray-200 text-gray-900 py-3 rounded-lg font-semibold hover:bg-gray-300 transition"
+              className="block w-full text-center bg-gray-200 text-black py-3 rounded-lg font-semibold hover:bg-gray-300 transition"
             >
               Get Started Free
             </Link>
@@ -78,7 +78,7 @@ export default function PricingPage() {
 
           {/* Pro Plan */}
           <div className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-2xl shadow-xl p-8 text-white relative">
-            <div className="absolute top-0 right-0 bg-yellow-400 text-gray-900 px-4 py-1 rounded-bl-lg rounded-tr-lg font-semibold text-sm">
+            <div className="absolute top-0 right-0 bg-yellow-400 text-black px-4 py-1 rounded-bl-lg rounded-tr-lg font-semibold text-sm">
               POPULAR
             </div>
 
@@ -142,7 +142,7 @@ export default function PricingPage() {
               <h3 className="font-bold text-lg mb-2">
                 Can I upgrade or downgrade anytime?
               </h3>
-              <p className="text-gray-600">
+              <p className="text-black">
                 Yes! You can upgrade to Pro or downgrade to Free at any time. Changes take effect immediately.
               </p>
             </div>
@@ -151,7 +151,7 @@ export default function PricingPage() {
               <h3 className="font-bold text-lg mb-2">
                 What happens to my links if I downgrade?
               </h3>
-              <p className="text-gray-600">
+              <p className="text-black">
                 If you downgrade from Pro to Free and have more than 5 links, your links will remain but only the first 5 will be visible to visitors.
               </p>
             </div>
@@ -160,7 +160,7 @@ export default function PricingPage() {
               <h3 className="font-bold text-lg mb-2">
                 Do you offer refunds?
               </h3>
-              <p className="text-gray-600">
+              <p className="text-black">
                 Yes, we offer a 30-day money-back guarantee. If you're not satisfied, contact us for a full refund.
               </p>
             </div>
@@ -169,7 +169,7 @@ export default function PricingPage() {
               <h3 className="font-bold text-lg mb-2">
                 How do custom domains work?
               </h3>
-              <p className="text-gray-600">
+              <p className="text-black">
                 With Pro, you can connect your own domain (e.g., links.yourdomain.com) instead of using linkpro.com/username. We'll provide simple instructions.
               </p>
             </div>
@@ -196,9 +196,9 @@ export default function PricingPage() {
           <div className="flex justify-between items-center">
             <div className="flex items-center">
               <FaLink className="text-primary-600 text-xl mr-2" />
-              <span className="text-xl font-bold text-gray-900">LinkPro</span>
+              <span className="text-xl font-bold text-black">LinkPro</span>
             </div>
-            <p className="text-gray-600">
+            <p className="text-black">
               &copy; 2024 LinkPro. All rights reserved.
             </p>
           </div>
