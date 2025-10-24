@@ -22,7 +22,7 @@ type Page = {
   bio: string;
   avatarUrl: string;
   theme: string;
-  links: Link[];
+  links?: Link[];
 };
 
 export default function DashboardPage() {
@@ -60,7 +60,12 @@ export default function DashboardPage() {
       const data = await res.json();
 
       if (data.page) {
-        setPage(data.page);
+        // Ensure links is always an array
+        const pageData = {
+          ...data.page,
+          links: data.page.links || []
+        };
+        setPage(pageData);
         setTitle(data.page.title);
         setBio(data.page.bio);
       } else {
@@ -91,7 +96,12 @@ export default function DashboardPage() {
         return;
       }
 
-      setPage(data.page);
+      // Ensure links is always an array
+      const pageData = {
+        ...data.page,
+        links: data.page.links || []
+      };
+      setPage(pageData);
       setShowCreatePage(false);
     } catch (error) {
       setError("Something went wrong");
@@ -115,7 +125,12 @@ export default function DashboardPage() {
         return;
       }
 
-      setPage(data.page);
+      // Ensure links is always an array
+      const pageData = {
+        ...data.page,
+        links: data.page.links || []
+      };
+      setPage(pageData);
     } catch (error) {
       setError("Something went wrong");
     }
@@ -393,12 +408,12 @@ export default function DashboardPage() {
               )}
 
               <div className="space-y-3">
-                {page?.links && page.links.length === 0 ? (
+                {!page?.links || page.links.length === 0 ? (
                   <p className="text-gray-500 text-center py-8">
                     No links yet. Add your first link to get started!
                   </p>
                 ) : (
-                  page?.links.map((link) => (
+                  page.links.map((link) => (
                     <div
                       key={link.id}
                       className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-primary-300 transition"
