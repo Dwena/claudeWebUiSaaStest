@@ -268,6 +268,13 @@ export default function DashboardPage() {
               <span className="text-2xl font-bold text-black">LinkPro</span>
             </div>
             <div className="flex items-center space-x-4">
+              <Link
+                href="/dashboard/analytics"
+                className="flex items-center text-black hover:text-black font-medium"
+              >
+                <FaChartLine className="mr-2" />
+                Statistiques
+              </Link>
               {!session?.user?.isPro && (
                 <Link
                   href="/pricing"
