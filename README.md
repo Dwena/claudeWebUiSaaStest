@@ -1,6 +1,6 @@
 # LinkPro - Link in Bio SaaS Platform
 
-A modern, full-featured "Link in Bio" SaaS application built with Next.js 14, TypeScript, Prisma, and PostgreSQL. Think of it as a Linktree alternative with a clean, monetizable freemium model.
+A modern, full-featured "Link in Bio" SaaS application built with Next.js 14, TypeScript, Prisma, and SQLite. Think of it as a Linktree alternative with a clean, monetizable freemium model.
 
 ## Features
 
@@ -33,7 +33,7 @@ A modern, full-featured "Link in Bio" SaaS application built with Next.js 14, Ty
 - **Frontend**: Next.js 14 (App Router), React 18, TypeScript
 - **Styling**: Tailwind CSS
 - **Authentication**: NextAuth.js
-- **Database**: PostgreSQL with Prisma ORM
+- **Database**: SQLite with Prisma ORM (easy to switch to PostgreSQL/MySQL for production)
 - **Payments**: Stripe (ready to integrate)
 - **Icons**: React Icons
 - **Deployment Ready**: Vercel, Railway, or any Node.js host
@@ -43,8 +43,9 @@ A modern, full-featured "Link in Bio" SaaS application built with Next.js 14, Ty
 ### Prerequisites
 
 - Node.js 18+ installed
-- PostgreSQL database (local or hosted)
 - npm or yarn package manager
+
+**That's it!** SQLite database will be created automatically.
 
 ### Installation
 
@@ -69,10 +70,12 @@ cp .env.example .env
 
 Required environment variables:
 ```env
-DATABASE_URL="postgresql://user:password@localhost:5432/linkpro"
+DATABASE_URL="file:./dev.db"
 NEXTAUTH_SECRET="your-secret-key-here"
 NEXTAUTH_URL="http://localhost:3000"
 ```
+
+**Note**: The SQLite database file (`dev.db`) will be created automatically when you run migrations.
 
 For Stripe integration (optional):
 ```env
@@ -156,13 +159,21 @@ The application uses the following main models:
 3. Add environment variables
 4. Deploy
 
-### Database Hosting
+### Database for Production
 
-Recommended PostgreSQL hosting options:
-- **Vercel Postgres** - Seamless integration
-- **Supabase** - Free tier available
-- **Railway** - Easy setup
-- **Neon** - Serverless Postgres
+**Development**: SQLite is perfect for development and testing.
+
+**Production**: For production, consider upgrading to a managed database:
+- **Vercel Postgres** - Seamless integration with Vercel
+- **Supabase** - Free tier available with PostgreSQL
+- **Railway** - Easy PostgreSQL/MySQL setup
+- **PlanetScale** - Serverless MySQL
+- **Neon** - Serverless PostgreSQL
+
+To switch from SQLite to PostgreSQL/MySQL, simply:
+1. Update `provider` in `prisma/schema.prisma`
+2. Update `DATABASE_URL` in `.env`
+3. Run `npx prisma migrate dev`
 
 ## Monetization Strategy
 
